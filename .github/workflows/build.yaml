@@ -10,13 +10,13 @@ on:
 jobs:
   build_web:
     name: Run Flutter Build (Web)
+    working-directory: ./web
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: subosito/flutter-action@v2
         with:
           channel: "stable"
-      - run: cd web
       - run: flutter --version
       - run: flutter pub get
       - run: flutter clean
