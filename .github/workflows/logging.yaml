@@ -1,0 +1,16 @@
+name: GitHub Action Test
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  test_logging:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Logging "Hey"
+        run: echo "Hey"
+
